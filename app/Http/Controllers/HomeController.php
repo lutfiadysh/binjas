@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Auth;
+
 class HomeController extends Controller
 {
     /**
@@ -10,7 +12,12 @@ class HomeController extends Controller
      * @return \Illuminate\View\View
      */
     public function index()
-    {
-        return view('dashboard');
+    {   
+        $userRole = Auth::user()->role;
+        
+        if ($userRole == "operator") {
+            return view('operator.dashboard');
+        }
+        return view('members.dashboard');
     }
 }
