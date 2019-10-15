@@ -14,19 +14,16 @@ class UsersTableSeeder extends Seeder
     public function run()
     {
         User::create([
+            'nip' => 123456,
             'name' => 'Operator',
-            'email' => 'operator@lavishkreate.com',
+            'date_of_birth' => now(),
             'role' => 'operator',
+            'pangkat' => '',
+            'kesatuan' => '',
+            'gol' => 'I',
+            'email' => 'operator@gmail.com',
             'email_verified_at' => now(),
             'password' => Hash::make('operator'),
-        ]);
-
-        User::create([
-            'name' => 'User',
-            'email' => 'user@lavishkreate.com',
-            'role' => 'user',
-            'email_verified_at' => now(),
-            'password' => Hash::make('user'),
         ]);
     }
 }

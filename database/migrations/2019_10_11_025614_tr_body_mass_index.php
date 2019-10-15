@@ -15,12 +15,17 @@ class TrBodyMassIndex extends Migration
     {
         Schema::create('tr_body_massa_index', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreign('user_id')->references('id')->on('ms_users');
-            $table->integer('Tinggi_Badan');
-            $table->integer('Berat_Badan');
-            $table->integer('Index_Massa_Tubuh');
-            $table->integer('tahun');
+            $table->unsignedBigInteger('user_id');
+            $table->integer('height');
+            $table->integer('weight');
+            $table->integer('bmi');
+            $table->integer('year');
             $table->integer('semester');
+
+            $table->foreign('user_id')
+                ->references('id')->on('users')
+                ->onDelete('CASCADE');
+            
             $table->timestamp('created_at')->useCurrent();
         });
     }

@@ -79,176 +79,186 @@
                             <i class="ni ni-tv-2 text-primary"></i> {{ __('Dashboard') }}
                         </a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link " href="#master" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="master">
+                            <i class="ni ni-air-baloon text-green" style="color: #f4645f;"></i>
+                            <span class="nav-link-text">Master Data</span>
+                        </a>
+
+                        <div class="collapse" id="master" style="">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('user.index') }}">
+                                        Data Personel
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('child.index') }}">
+                                        Data Anak
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                    
                     <li class="nav-item">
                         <a class="nav-link" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                             <i class="fab fa-laravel" style="color: #f4645f;"></i>
                             <span class="nav-link-text" >SDM</span>
                         </a>
 
-                    <div class="collapse show" id="navbar-examples" style="">
-                        <ul class="nav nav-sm flex-column">
+                        <div class="collapse" id="navbar-examples" style="">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/inputtkj">{{ __('Input nilai TKJ') }}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/inputbela"> {{ __('Input nilai Beladiri') }}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/prestasii"> {{ __('Personel Prestasi') }}
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/laporan">{{ __('Laporan') }}
+                                    </a>
+                                </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="/inputtkj">{{ __('Input nilai TKJ') }}
+                                <a class="nav-link" href="/rekom">
+                                    {{ __('Rekom') }}
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/inputbela"> {{ __('Input nilai Beladiri') }}
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/prestasii"> {{ __('Personel Prestasi') }}
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/laporan">{{ __('Laporan') }}
-                                </a>
-                            </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="/rekom">
-                                 {{ __('Rekom') }}
-                            </a>
-                        </li>
-                        </ul>
-                    </div>
-                </li>
+                            </ul>
+                        </div>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link " href="#binjaspol" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="binjaspol">
-                        <i class="ni ni-planet text-blue" style="color: #f4645f;"></i>
-                        <span class="nav-link-text">Binjaspol</span>
-                    </a>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#binjaspol" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="binjaspol">
+                            <i class="ni ni-planet text-blue" style="color: #f4645f;"></i>
+                            <span class="nav-link-text">Binjaspol</span>
+                        </a>
 
-                    <div class="collapse show" id="binjaspol" style="">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/profile">
-                                    Struktur Orgaisasi Binjas
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
-                                    Tentang Binjas polri
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
-                                    Program Binjas
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
-                                    Regulasi
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
-                </li>
+                        <div class="collapse" id="binjaspol" style="">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/profile">
+                                        Struktur Orgaisasi Binjas
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
+                                        Tentang Binjas polri
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
+                                        Program Binjas
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
+                                        Regulasi
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link " href="#master" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="master">
-                        <i class="ni ni-air-baloon text-green" style="color: #f4645f;"></i>
-                        <span class="nav-link-text">Master Data</span>
-                    </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#analisa" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="analisa">
+                            <i class="ni ni-pin-3 text-orange" style="color: #f4645f;"></i>
+                            <span class="nav-link-text">Analisa Data</span>
+                        </a>
 
-                    <div class="collapse show" id="master" style="">
-                        <ul class="nav nav-sm flex-column">
-                        </ul>
-                    </div>
-                </li>
+                        <div class="collapse" id="analisa" style="">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/profile">
+                                    Grafik Hasil TKJ Personel
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
+                                    Grafik Hasil Uji Beladiri Polri Personel
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
+                                    Grafik IMT Personel
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
+                                    Grafik Personel Berprestasi
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link " href="#analisa" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="analisa">
-                        <i class="ni ni-pin-3 text-orange" style="color: #f4645f;"></i>
-                        <span class="nav-link-text">Analisa Data</span>
-                    </a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#pencarian" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="pencarian">
+                            <i class="ni ni-badge text-blue" style="color: #f4645f;"></i>
+                            <span class="nav-link-text">Pencarian Data</span>
+                        </a>
 
-                    <div class="collapse show" id="analisa" style="">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/profile">
-                                Grafik Hasil TKJ Personel
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
-                                Grafik Hasil Uji Beladiri Polri Personel
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
-                                Grafik IMT Personel
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
-                                Grafik Personel Berprestasi
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+                        <div class="collapse" id="pencarian" style="">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/profile">
+                                        Pencarian Data Hasil TKJ, Hasil BDP, IMT Perorangan, Keseluruhan, Mabes, Polda, Satker, Sub Satker, Polres, Pusdik/SPN
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
+                                        Pencarian Personel Berprestasi, Putra/putri Polri Berprestasi
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link " href="#pencarian" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="pencarian">
-                        <i class="ni ni-badge text-blue" style="color: #f4645f;"></i>
-                        <span class="nav-link-text">Pencarian Data</span>
-                    </a>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#laporan" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="laporan">
+                            <i class="ni ni-books text-pink"></i>
+                            <span class="nav-link-text">Laporan</span>
+                        </a>
 
-                    <div class="collapse show" id="pencarian" style="">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/profile">
-                                    Pencarian Data Hasil TKJ, Hasil BDP, IMT Perorangan, Keseluruhan, Mabes, Polda, Satker, Sub Satker, Polres, Pusdik/SPN
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
-                                    Pencarian Personel Berprestasi, Putra/putri Polri Berprestasi
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+                        <div class="collapse" id="laporan" style="">
+                            <ul class="nav nav-sm flex-column">
+                            </ul>
+                        </div>
+                    </li>
 
-                <li class="nav-item">
-                    <a class="nav-link " href="#laporan" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="laporan">
-                        <i class="ni ni-books text-pink"></i>
-                        <span class="nav-link-text">Laporan</span>
-                    </a>
+                    <li class="nav-item">
+                        <a class="nav-link " href="#berita" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="berita">
+                            <i class="ni ni-books text-pink"></i>
+                            <span class="nav-link-text">Berita Terkini</span>
+                        </a>
 
-                    <div class="collapse show" id="laporan" style="">
-                        <ul class="nav nav-sm flex-column">
-                        </ul>
-                    </div>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link " href="#berita" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="berita">
-                        <i class="ni ni-books text-pink"></i>
-                        <span class="nav-link-text">Berita Terkini</span>
-                    </a>
-
-                    <div class="collapse show" id="berita" style="">
-                        <ul class="nav nav-sm flex-column">
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
-                                    Sosialisasi Regulasi (Perkap, PerAs, KEP, SOP, Juknis) dari Tingkat Mabes ke jajaran
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
-                                Informasi terkait program kegiatan
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
-                                Informasi terkait event yang berkaitan dengan binjas Polri.
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                </li>
+                        <div class="collapse" id="berita" style="">
+                            <ul class="nav nav-sm flex-column">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
+                                        Sosialisasi Regulasi (Perkap, PerAs, KEP, SOP, Juknis) dari Tingkat Mabes ke jajaran
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
+                                    Informasi terkait program kegiatan
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="https://argon-dashboard-laravel.creative-tim.com/user">
+                                    Informasi terkait event yang berkaitan dengan binjas Polri.
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
                 @endif
             </ul>
 

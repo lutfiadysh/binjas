@@ -18,6 +18,7 @@
         <!-- Argon CSS -->
         {{-- <link type="text/css" href="{{ asset('argon') }}/css/argon.css?v=1.0.0" rel="stylesheet"> --}}
         <link rel="stylesheet" href="{{ asset('argon/css/argon.css') }}">
+        <link rel="stylesheet" href="{{ asset('argon') }}/vendor/datatables/datatables.min.css">
     </head>
     <body class="{{ $class ?? '' }}">
         @auth()
@@ -34,9 +35,23 @@
 
         <script src="{{ asset('argon') }}/vendor/jquery/dist/jquery.min.js"></script>
         <script src="{{ asset('argon') }}/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="{{ asset('argon') }}/vendor/datatables/datatables.min.js"></script>
         <script src="https://cdnjs.com/libraries/Chart.js"></script>
         
         @stack('js')
+
+        <script>
+            $(document).ready(function() {
+                $('#table').DataTable({
+                    "language": {
+                        "paginate": {
+                            "previous": "<i class='ni ni-bold-left'></i>",
+                            "next": "<i class='ni ni-bold-right'></i>",
+                        }
+                    }
+                });
+            });
+        </script>
         
         <!-- Argon JS -->
         <script src="{{ asset('argon') }}/js/argon.js?v=1.0.0"></script>

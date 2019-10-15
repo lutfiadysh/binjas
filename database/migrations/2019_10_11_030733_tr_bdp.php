@@ -15,10 +15,15 @@ class TrBdp extends Migration
     {
         Schema::create('tr_bdp', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreign('user_id')->references('id')->on('ms_user');
-            $table->integer('teknik_dasar');
-            $table->integer('tangan_kosong_lawan_alat');
-            $table->integer('alat_lawan_alat');
+            $table->unsignedBigInteger('user_id');
+            $table->integer('basic_technique');
+            $table->integer('bare_handed');
+            $table->integer('with_equipment');
+
+            $table->foreign('user_id')
+                ->references('id')->on('users')
+                ->onDelete('CASCADE');
+            
             $table->timestamp('created_at')->useCurrent();
         });
     }

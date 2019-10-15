@@ -15,14 +15,19 @@ class TrTkj extends Migration
     {
         Schema::create('tr_tkj', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->foreign('user_id')->references('id')->on('ms_users');
-            $table->integer('Lari_12_Menit');
-            $table->integer('Pull_Up_Chinning');
-            $table->integer('Sit_Up');
-            $table->integer('Push_Up');
-            $table->integer('Shuttle_Run');
-            $table->integer('tahun');
+            $table->unsignedBigInteger('user_id');
+            $table->integer('running');
+            $table->integer('pull_up');
+            $table->integer('sit_up');
+            $table->integer('push_up');
+            $table->integer('shuttle_run');
+            $table->integer('year');
             $table->integer('semester');
+
+            $table->foreign('user_id')
+                ->references('id')->on('users')
+                ->onDelete('CASCADE');
+            
             $table->timestamp('created_at')->useCurrent();
         });
     }
