@@ -36,7 +36,7 @@
                             <table class="table table-bordered table-flush" id="table">
                                 <thead class="thead-light">
                                     <th scope="col">#</th>
-                                    <th scope="col">Nama</th>
+                                    <th scope="col">Nama Anak</th>
                                     <th scope="col">Jenis Kelamin</th>
                                     <th scope="col">Tanggal lahir</th>
                                     <th scope="col"></th>
@@ -45,10 +45,8 @@
                                     @foreach ($child as $child)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td><a href="{{ route('child.show',$user) }}">{{ $child->name }}</a></td>
-                                            <td>
-                                                <a href="mailto:{{ $user->email }}" target="_blank">{{ $child->sex }}</a>
-                                            </td>
+                                            <td>{{ $child->name }}</td>
+                                            <td>{{ $child->sex }} </td>
                                             <td>{{ $child->date_of_birth }}</td>
                                             <td class="text-right">
                                                 <div class="dropdown">

@@ -111,11 +111,11 @@
                         <div class="collapse" id="navbar-examples" style="">
                             <ul class="nav nav-sm flex-column">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/inputtkj">{{ __('Input nilai TKJ') }}
+                                    <a class="nav-link" href="{{ route('tkj.index') }}">{{ __('Input nilai TKJ') }}
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="/inputbela"> {{ __('Input nilai Beladiri') }}
+                                    <a class="nav-link" href="{{ route('bdp.index') }}"> {{ __('Input nilai Beladiri') }}
                                     </a>
                                 </li>
                                 <li class="nav-item">

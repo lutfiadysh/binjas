@@ -25,16 +25,11 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 
 	Route::resource('child', 'ChildController');
+	Route::resource('tkj','TkjController');
+	Route::resource('bdp','BdpController');
 	
 	Route::get('kesjas', function() {
 		return view('members.index');
-	});
-
-	Route::get('inputtkj', function() {
-		return view('operator.ipttkj');
-	});
-	Route::get('inputbela', function() {
-		return view('operator.iptbela');
 	});
 	Route::get('prestasii', function() {
 		return view('operator.prestasi');

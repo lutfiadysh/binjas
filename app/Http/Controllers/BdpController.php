@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Child;
-use App\User;
 use Illuminate\Http\Request;
+use App\Bdp;
 
-class ChildController extends Controller
+class BdpController extends Controller
 {
-    public function index(User $model)
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-        $users = $model->all();
-
-        return view('child.index', compact('users'));
+        return view('operator.iptbela');
     }
 
     /**
@@ -22,8 +24,7 @@ class ChildController extends Controller
      */
     public function create()
     {
-
-        return view('child.create');
+        //
     }
 
     /**
@@ -32,11 +33,11 @@ class ChildController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request,Child $model)
-    {   
+    public function store(Request $request,Bdp $model)
+    {
         $model->create($request->all());
 
-        return redirect()->route('child.index')->withStatus(__('Child successfully created.'));
+        return redirect()->route('bdp.index')->withStatus(__('Data successfully created.'));
     }
 
     /**
@@ -47,9 +48,7 @@ class ChildController extends Controller
      */
     public function show($id)
     {
-        $user = User::findOrFail($id);
-        $child = $user->children;
-        return view('child.show',compact('user','child'));
+        //
     }
 
     /**
@@ -58,10 +57,9 @@ class ChildController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Child $id)
+    public function edit($id)
     {
-        $child = Child::findOrFail($id);
-        return view('child.edit', compact('child'));
+        //
     }
 
     /**
@@ -73,9 +71,7 @@ class ChildController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $child->update($request->all());
-
-        return redirect()->withStatus(__('User successfully updated.'));
+        //
     }
 
     /**
