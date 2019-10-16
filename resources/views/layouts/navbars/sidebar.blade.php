@@ -94,7 +94,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('child.index') }}">
+                                    <a class="nav-link" href="child">
                                         Data Anak
                                     </a>
                                 </li>

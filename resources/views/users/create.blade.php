@@ -1,7 +1,7 @@
 @extends('layouts.app', ['title' => __('User Management')])
 
 @section('content')
-    @include('users.partials.header', ['title' => __('Add User')])   
+    @include('layouts.headers.cards', ['title' => __('Tambah Personel')])   
 
     <div class="container-fluid mt--7">
         <div class="row">
@@ -161,7 +161,7 @@
                                 </div>
 
                                 <div class="text-center">
-                                    <button type="submit" class="btn btn-success mt-4">{{ __('Save') }}</button>
+                                    <button type="submit" class="btn btn-success mt-4">{{ __('Simpan') }}</button>
                                 </div>
                             </div>
                         </form>

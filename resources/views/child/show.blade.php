@@ -13,7 +13,7 @@
                                 <h3 class="mb-0"></h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('user.create') }}" class="btn btn-sm btn-primary">Tambah Data</a>
+                                <a href="{{ route('child.create') }}" class="btn btn-sm btn-primary">Tambah Data</a>
                             </div>
                         </div>
                     </div>
@@ -31,37 +31,37 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
+                            <h3>Anak dari  sdr.<b>{{ $user->name }}</b></h3>
+
                             <table class="table table-bordered table-flush" id="table">
                                 <thead class="thead-light">
-                                    <tr>
-                                        <th scope="col">#</th>
-                                        <th scope="col">Nama Personel</th>
-                                        <th scope="col">Email</th>
-                                        <th scope="col">{{ __('Creation Date') }}</th>
-                                        <th scope="col"></th>
-                                    </tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Nama</th>
+                                    <th scope="col">Jenis Kelamin</th>
+                                    <th scope="col">Tanggal lahir</th>
+                                    <th scope="col"></th>
                                 </thead>
                                 <tbody>
-                                    @foreach ($users as $user)
+                                    @foreach ($child as $child)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td><a href="{{ route('child.show',$user) }}">{{ $user->name }}</a></td>
+                                            <td><a href="{{ route('child.show',$user) }}">{{ $child->name }}</a></td>
                                             <td>
-                                                <a href="mailto:{{ $user->email }}" target="_blank">{{ $user->email }}</a>
+                                                <a href="mailto:{{ $user->email }}" target="_blank">{{ $child->sex }}</a>
                                             </td>
-                                            <td>{{ $user->created_at->format('d/m/Y H:i') }}</td>
+                                            <td>{{ $child->date_of_birth }}</td>
                                             <td class="text-right">
                                                 <div class="dropdown">
                                                     <a class="btn btn-primary btn-icon-only" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                                         <i class="fas fa-ellipsis-v"></i>
                                                     </a>
                                                     <div class="dropdown-menu dropdown-menu-right dropdown-menu-arrow">
-                                                        @if ($user->id != auth()->id())
+                                                        @if ($child->id != auth()->id())
                                                             <form action="{{ route('user.destroy', $user) }}" method="post">
                                                                 @csrf
                                                                 @method('delete')
                                                                 
-                                                                <a class="dropdown-item" href="{{ route('user.edit', $user) }}">{{ __('Edit') }}</a>
+                                                                <a class="dropdown-item" href="{{ route('child.edit', $child) }}">{{ __('Edit') }}</a>
                                                                 <button type="button" class="dropdown-item" onclick="confirm('{{ __("Are you sure you want to delete this user?") }}') ? this.parentElement.submit() : ''">
                                                                     {{ __('Delete') }}
                                                                 </button>

@@ -11,7 +11,7 @@ class ChildController extends Controller
     public function index(User $model)
     {
         $users = $model->all();
-        
+
         return view('child.index', compact('users'));
     }
 
@@ -22,7 +22,8 @@ class ChildController extends Controller
      */
     public function create()
     {
-        
+
+        return view('child.create');
     }
 
     /**
@@ -31,9 +32,11 @@ class ChildController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
-    {
-        //
+    public function store(Request $request,Child $model)
+    {   
+        $model->create($request->all());
+
+        return redirect()->route('child.index')->withStatus(__('Child successfully created.'));
     }
 
     /**
@@ -44,7 +47,9 @@ class ChildController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::findOrFail($id);
+        $child = $user->children;
+        return view('child.show',compact('user','child'));
     }
 
     /**
