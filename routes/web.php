@@ -27,12 +27,11 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('child', 'ChildController');
 	Route::resource('tkj','TkjController');
 	Route::resource('bdp','BdpController');
+	Route::resource('prestasi','PrestasiController');
+
 	
 	Route::get('kesjas', function() {
 		return view('members.index');
-	});
-	Route::get('prestasii', function() {
-		return view('operator.prestasi');
 	});
 	Route::get('laporan', function() {
 		return view('operator.laporan');
@@ -42,9 +41,6 @@ Route::group(['middleware' => 'auth'], function () {
 	});
 	Route::get('beladiri', function() {
 		return view('members.beladiri');
-	});
-	Route::get('prestasi', function() {
-		return view('members.prestasi');
 	});
 	Route::get('rangkuman', function() {
 		return view('members.rangkuman');

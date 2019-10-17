@@ -1,7 +1,7 @@
 @extends('layouts.app', ['title' => __('User Management')])
 
 @section('content')
-    @include('layouts.headers.cards', ['title' => __('Input Nilai TKJ')])   
+    @include('layouts.headers.cards', ['title' => __('Personel Prestasi')])   
 
     <div class="container-fluid mt--7">
         <div class="row mb-5">
@@ -23,7 +23,7 @@
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
-                            <table class="table table-bordered table-flush" id="datatables">
+                            <table class="table table-bordered table-flush" id="table">
                                 <thead class="thead-light">
                                     <tr>
                                         <th scope="col">#</th>
@@ -34,7 +34,17 @@
                                     @foreach ($users as $user)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td><a href="{{ route('tkj.show',$user) }}">{{ $user->name }}</a></td>
+                                            <td><div class="dropdown show">
+                                                <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                        {{$user->name}}
+                                                    </a>
+
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                        <a class="dropdown-item" href="{{ route('prestasi.show',$user) }}">Bidang Olahraga</a>
+                                                        <a class="dropdown-item" href="{{ route('prestasi.edit',$user) }}">Bidang lain</a>
+                                                        <a class="dropdown-item" href="{{ route('prestasi.update',$user) }}">Putra Putri polri</a>
+                                                    </div>
+                                                </div></td>
                                         </tr>
                                     @endforeach
                                 </tbody>
@@ -48,22 +58,3 @@
         @include('layouts.footers.auth')
     </div>
 @endsection
-
-<div class="modal fade" id="cari" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-            <h3>heii</h3>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Cari</button>
-      </div>
-    </div>
-  </div>
-</div>
