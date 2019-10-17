@@ -32,7 +32,7 @@
                             <div class="pl-lg-4 col-md-6">
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="input-name">{{ __('User ID') }}</label>
-                                    <input type="text" name="user_id" id="input-name" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Lari') }}" value="{{ old('name') }}" required autofocus>
+                                    <input type="text" name="user_id" id="input-name" class="form-control form-control-alternative{{ $errors->has('name') ? ' is-invalid' : '' }}" placeholder="{{ __('Lari') }}" value="{{ $user->id }}" required autofocus>
                                     @if ($errors->has('lari'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('lari') }}</strong>
@@ -83,48 +83,3 @@
         @include('layouts.footers.auth')
     </div>
 @endsection
-
-<div class="modal fade" id="cari" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body">
-      <form action="">
-            <div class="form-group">
-                <label class="form-control-label" for="tingkat">{{ __('Nama') }}</label>
-                <input type="text" class="form-control form-control-alternative " placeholder="Nama">
-            </div>
-            <div class="form-group">
-                <label class="form-control-label" for="tingkat">{{ __('Pangkat') }}</label>
-                <input type="text" class=" form-control form-control-alternative" placeholder="Pangkat">
-            </div>
-            <div class="form-group row">
-                <label class="form-control-label col-md-12" for="tingkat">{{ __('Tgl Lahir') }}</label>
-                <input type="text" class="ml-3 form-control form-control-alternative col-sm-6" placeholder="Tanggal  lahir">
-                <input type="text" class="form-control form-control-alternative col-sm-3" placeholder="umur">
-            </div>
-            <div class="form-group ">
-                <label class="form-control-label " for="tingkat">{{ __('NIP/NRP') }}</label>
-                <input type="text" class="form-control form-control-alternative" placeholder="NIP/NRP">
-            </div>
-            <div class="form-group">
-                <label class="form-control-label" for="tingkat">{{ __('Kesatuan') }}</label>
-                <input type="text" class="form-control form-control-alternative" placeholder="Kesatuan">
-            </div>
-            <div class="form-group">
-                <label class="form-control-label" for="tingkat">{{ __('Gol') }}</label>
-                <input type="text" class="form-control form-control-alternative" placeholder="Gol">
-            </div>
-        </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-success">Cari</button>
-      </div>
-    </div>
-  </div>
-</div>

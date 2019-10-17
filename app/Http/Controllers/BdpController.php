@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 use App\Bdp;
 
 class BdpController extends Controller
@@ -12,9 +13,11 @@ class BdpController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $model)
     {
-        return view('operator.iptbela');
+        $users = User::all();
+
+        return view('operator.bdp.index',compact('users'));
     }
 
     /**
@@ -48,7 +51,9 @@ class BdpController extends Controller
      */
     public function show($id)
     {
-        //
+        $user = User::findOrFail($id);
+
+        return view('operator.bdp.show',compact('user'));
     }
 
     /**

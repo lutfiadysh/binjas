@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Tkj;
+use App\User;
 
 class TkjController extends Controller
 {
@@ -12,9 +13,11 @@ class TkjController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(User $model)
     {
-        return view('operator.ipttkj');   
+        $users = $model->all();
+
+        return view('operator.tkj.index',compact('users'));   
     }
 
     /**
@@ -48,7 +51,9 @@ class TkjController extends Controller
      */
     public function show($id)
     {
-        //
+        $user =User::findOrFail($id);
+        return view('operator.tkj.show',compact('user'));
+
     }
 
     /**
