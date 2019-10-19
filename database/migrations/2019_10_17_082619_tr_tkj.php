@@ -1,9 +1,7 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
 class TrTkj extends Migration
 {
     /**
@@ -23,7 +21,6 @@ class TrTkj extends Migration
             $table->integer('shuttle_run');
             $table->integer('year');
             $table->integer('semester');
-
             $table->foreign('user_id')
                 ->references('id')->on('users')
                 ->onDelete('CASCADE');
@@ -31,7 +28,6 @@ class TrTkj extends Migration
             $table->timestamp('created_at')->useCurrent();
         });
     }
-
     /**
      * Reverse the migrations.
      *

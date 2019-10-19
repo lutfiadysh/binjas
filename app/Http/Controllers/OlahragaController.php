@@ -6,18 +6,16 @@ use Illuminate\Http\Request;
 use App\User;
 use App\Prestasi;
 
-class PrestasiController extends Controller
+class OlahragaController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index(User $model)
+    public function index()
     {
-        $users = User::all();
-
-        return view('operator.prestasi.index',compact('users'));
+        
     }
 
     /**
@@ -25,9 +23,9 @@ class PrestasiController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create()
     {
- 
+        //
     }
 
     /**
@@ -39,8 +37,7 @@ class PrestasiController extends Controller
     public function store(Request $request,Prestasi $model)
     {
         $model->create($request->all());
-
-        return redirect()->route('prestasi.index');
+        return redirect()->route('prestasi.index')->withStatus(__('Data successfully created.'));
     }
 
     /**
@@ -51,9 +48,9 @@ class PrestasiController extends Controller
      */
     public function show($id)
     {
-        $users = User::findOrFail($id);
+        $users =User::findOrFail($id);
 
-        return view('operator.prestasi.show',compact('users'));
+        return view('operator.olahraga.show',compact('users'));
     }
 
     /**
@@ -64,11 +61,8 @@ class PrestasiController extends Controller
      */
     public function edit($id)
     {
-        $users = User::findOrFail($id);
-
-        return view('operator.prestasi.showlain',compact('users'));
+        //
     }
-
 
     /**
      * Update the specified resource in storage.
@@ -77,12 +71,9 @@ class PrestasiController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update($id)
+    public function update(Request $request, $id)
     {
-        $users = User::findOrFail($id);
-
-        return view('operator.prestasi.showputraputri',compact('users'));
-
+        //
     }
 
     /**

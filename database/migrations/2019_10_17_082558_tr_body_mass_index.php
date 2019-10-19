@@ -1,9 +1,7 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
 class TrBodyMassIndex extends Migration
 {
     /**
@@ -21,7 +19,6 @@ class TrBodyMassIndex extends Migration
             $table->integer('bmi');
             $table->integer('year');
             $table->integer('semester');
-
             $table->foreign('user_id')
                 ->references('id')->on('users')
                 ->onDelete('CASCADE');
@@ -29,7 +26,6 @@ class TrBodyMassIndex extends Migration
             $table->timestamp('created_at')->useCurrent();
         });
     }
-
     /**
      * Reverse the migrations.
      *

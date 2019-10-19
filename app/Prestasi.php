@@ -9,6 +9,6 @@ class Prestasi extends Model
     protected $table = 'tr_achievements';
 
     protected $fillable = [
-        'user_id','branch','position','level','file','year',
+        'user_id','bidang','branch','position','level','file','year',
     ];
 }

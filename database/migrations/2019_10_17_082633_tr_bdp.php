@@ -1,9 +1,7 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
-
 class TrBdp extends Migration
 {
     /**
@@ -19,7 +17,6 @@ class TrBdp extends Migration
             $table->integer('basic_technique');
             $table->integer('bare_handed');
             $table->integer('with_equipment');
-
             $table->foreign('user_id')
                 ->references('id')->on('users')
                 ->onDelete('CASCADE');
@@ -27,7 +24,6 @@ class TrBdp extends Migration
             $table->timestamp('created_at')->useCurrent();
         });
     }
-
     /**
      * Reverse the migrations.
      *

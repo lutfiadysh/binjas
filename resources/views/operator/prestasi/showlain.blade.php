@@ -15,10 +15,20 @@
                             </div>
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
+                                    <label class="form-control-label" for="cabang">{{ __('User ID') }}</label>
+                                    <input type="text" name="user_id" id="user_id" value="{{$users->id}}" class="form-control form-control-alternative col-md-3" disabled>
+                                    @if ($errors->has('user_id'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('user_id') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                            <div class="pl-lg-4">
+                                <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
                                     <label class="form-control-label" for="cabang">{{ __('Cabang olahraga') }}</label>
-                                    <select name="cabang" id="cabang" class="form-control form-control-alternative{{ $errors->has('situp') ? ' is-invalid' : '' }}">
+                                    <select name="cabang" id="cabang" class="form-control form-control-alternative{{ $errors->has('cabang') ? ' is-invalid' : '' }}">
                                         <option value="" disabled>cabang olahraga</option>
-                                        <option value="">karate</option>
+                                        <option value="karate">karate</option>
                                     </select>
                                     @if ($errors->has('cabang'))
                                         <span class="invalid-feedback" role="alert">
@@ -30,7 +40,7 @@
                                     <label class="form-control-label" for="posisi">{{ __('Posisi') }}</label>
                                     <select name="poisi" id="posisi" class="form-control form-control-alternative{{ $errors->has('situp') ? ' is-invalid' : '' }}">
                                         <option value="" disabled>posisi</option>
-                                        <option value="">Pelatih</option>
+                                        <option value="pelatih">Pelatih</option>
                                     </select>
                                     @if ($errors->has('chinning'))
                                         <span class="invalid-feedback" role="alert">

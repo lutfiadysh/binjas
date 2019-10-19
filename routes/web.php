@@ -28,6 +28,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('tkj','TkjController');
 	Route::resource('bdp','BdpController');
 	Route::resource('prestasi','PrestasiController');
+	Route::resource('olahraga','OlahragaController');
+	Route::resource('lain','LainController');
 
 	
 	Route::get('kesjas', function() {

@@ -40,8 +40,8 @@
                                                     </a>
 
                                                     <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                                        <a class="dropdown-item" href="{{ route('prestasi.show',$user) }}">Bidang Olahraga</a>
-                                                        <a class="dropdown-item" href="{{ route('prestasi.edit',$user) }}">Bidang lain</a>
+                                                        <a class="dropdown-item" href="{{ route('olahraga.show',$user) }}">Bidang Olahraga</a>
+                                                        <a class="dropdown-item" href="{{ route('lain.show',$user) }}">Bidang lain</a>
                                                         <a class="dropdown-item" href="{{ route('prestasi.update',$user) }}">Putra Putri polri</a>
                                                     </div>
                                                 </div></td>

@@ -10,16 +10,27 @@
                 <div class="card shadow mb-3">
                     <!-- konten bidang olahraga-->
                     <div class="card-body">
-                        <form method="post" action="{{ route('prestasi.store') }}" autocomplete="off">
+                        <form method="post" action="{{ route('olahraga.store') }}" autocomplete="off">
                             @csrf
                             <div class="row">
-                                <h6 class="heading-small text-muted mb-4 col-md-8">{{ __('Bidang Olahraga') }}</h6>
+                                <h6 class="heading-small text-muted mb-4 col-md-8">{{ __('Bidang Lain') }}</h6>
                                 
                             </div>
                             <div class="pl-lg-4">
-                                <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="cabang">{{ __('User ID') }}</label>
-                                    <input type="text" class="form-control form-control-alternative" name="user_id" value="{{ $users->id }}" disabled>
+                                <div class="form-group{{ $errors->has('user_id') ? ' has-danger' : '' }}">
+                                    <div class="row">
+                                    <input type="hidden" name="user_id" id="input-name" class="form-control col-md-6 form-control-alternative{{ $errors->has('user_id') ? ' is-invalid' : '' }}" placeholder="{{ __('User ID') }}"  value="{{ $users->id }}" >
+                                    </div>
+                                    @if ($errors->has('user_id'))
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $errors->first('user_id') }}</strong>
+                                        </span>
+                                    @endif
+                                </div>
+                                <div class="form-group{{ $errors->has('user_id') ? ' has-danger' : '' }}">
+                                    <div class="row">
+                                    <input type="hidden" name="bidang" id="input-name" class="form-control col-md-6 form-control-alternative{{ $errors->has('user_id') ? ' is-invalid' : '' }}" placeholder="{{ __('User ID') }}"  value="lain" >
+                                    </div>
                                     @if ($errors->has('user_id'))
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $errors->first('user_id') }}</strong>
