@@ -52,7 +52,7 @@
 
             <nav id="nav-menu-container">
                 <ul class="nav-menu">
-                    <li class="menu-active"><a href="{{route('user.index')}}">Home</a></li>
+                    <li class="menu-active"><a href="">Home</a></li>
                     <li class="dropdown">
                         <a href="#" >Binjaspol </a>
                         <ul class="dropdown-menu">
@@ -96,9 +96,9 @@
                     <li class="dropdown">
                         <a href="#" >Berita Terkini</a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Sosialisasi Regulasi</a></li>
+                            <li><a href="#">Sosialisasi Regulasi Dari tingkat mabes ke jajaran</a></li>
                             <li><a href="#">Informasi terkait program kegiatan</a></li>
-                            <li><a href="#">Informasi terkait event yang berkaitan</a></li>
+                            <li><a href="#">Informasi terkait event yang berkaitan dengan binjas polri</a></li>
                         </ul>
                     </li>
                     @guest
@@ -114,11 +114,12 @@
                         <li class="dropdown">
                             <a href="#" >{{ Auth::user()->name }}</a>
                             <ul class="dropdown-menu">
+                                <li><a href="{{ route('user.index') }}">Dashboard</a></li>
                                 <li><a  href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a></li>
+                                </a></li>
                             </ul>
                         </li>
                     @endguest
@@ -157,10 +158,6 @@
                 <div class="col-lg-3">
                     <h3>Tempat</h3>
                     <p>Downtown Conference Center, New York</p>
-                </div>
-                <div class="col-lg-3">
-                    <h3>Waktu</h3>
-                    <p>Monday to Wednesday<br>10-12 December</p>
                 </div>
             </div>
         </div>
@@ -279,7 +276,7 @@
       <div class="container wow fadeInUp">
         <div class="section-header">
           <h2>Video Terkait</h2>
-          <p>Here is our event schedule</p>
+          <p>Video terkait dengan binjas.</p>
         </div>
 
         <ul class="nav nav-tabs" role="tablist">
@@ -543,13 +540,13 @@
 
         <div class="row no-gutters">
           <div class="col-lg-6 venue-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sPolres+Bogor+Kota!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.3230425863235!2d106.80807131497282!3d-6.221064662662593!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f153b792d0bd%3A0x4a27d07afaf47cca!2sPolda%20Metro%20Jaya!5e0!3m2!1sen!2sid!4v1571630843543!5m2!1sen!2sid" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>" frameborder="0" style="border:0" allowfullscreen></iframe>
           </div>
 
           <div class="col-lg-6 venue-info">
             <div class="row justify-content-center">
               <div class="col-11 col-lg-8">
-                <h3>Downtown Conference Center, New York</h3>
+                <h3>Gelora, Tanahabang, Central Jakarta City, Jakarta</h3>
                 <p>Iste nobis eum sapiente sunt enim dolores labore accusantium autem. Cumque beatae ipsam. Est quae sit qui voluptatem corporis velit. Qui maxime accusamus possimus. Consequatur sequi et ea suscipit enim nesciunt quia velit.</p>
               </div>
             </div>

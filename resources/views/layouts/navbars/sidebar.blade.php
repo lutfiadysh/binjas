@@ -5,7 +5,7 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- Brand -->
-        <a class="navbar-brand pt-0" href="{{ route('home') }}">
+        <a class="navbar-brand pt-0" href="/">
             <h1>
                 <img src="{{ asset('img/logo.jpg') }}" class="navbar-brand-img" alt="...">
                 <span>SDM Polri</span>
