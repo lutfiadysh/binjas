@@ -33,6 +33,7 @@
                                     <tr>
                                         <th scope="col">#</th>
                                         <th scope="col">Nama Personel</th>
+                                        <th scope="col"></th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -40,6 +41,11 @@
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td><a href="{{ route('child.show',$user) }}">{{ $user->name }}</a></td>
+                                            <td >
+                                                <a href="{{ route('child.show',$user) }}" class="btn btn-primary btn-icon-only">
+                                                    <i class="ni ni-fat-add"> </i>
+                                                </a>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 </tbody>

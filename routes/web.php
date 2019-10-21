@@ -24,12 +24,21 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile', ['as' => 'profile.update', 'uses' => 'ProfileController@update']);
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 
+	Route::prefix('child')->group(function() {
+		Route::get('', 'ChildController@index')->name('child.index');
+		Route::get('{id}', 'ChildController@show')->name('child.show');
+		Route::get('{id}/create', 'ChildController@create')->name('child.create');
+		Route::post('{id}', 'ChildController@store')->name('child.store');
+		Route::get('{id}/edit', 'ChildController@edit')->name('child.edit');
+	});
+	
 	Route::resource('child', 'ChildController');
 	Route::resource('tkj','TkjController');
 	Route::resource('bdp','BdpController');
 	Route::resource('prestasi','PrestasiController');
 	Route::resource('olahraga','OlahragaController');
-	Route::resource('lain','LainController');
+	Route::resource('lain','LainController'); 
+	Route::resource('putera','PuteraController');
 
 	
 	Route::get('kesjas', function() {

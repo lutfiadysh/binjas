@@ -13,15 +13,15 @@
                             <div class="row">
                                 <h6 class="heading-small text-muted mb-4 col-md-8">{{ __('Bidang Lain') }}</h6>
                             </div>
-                            <div class="pl-lg-4">
-                                <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">
-                                    <label class="form-control-label" for="cabang">{{ __('User ID') }}</label>
-                                    <input type="text" name="user_id" id="user_id" value="{{$users->id}}" class="form-control form-control-alternative col-md-3" disabled>
-                                    @if ($errors->has('user_id'))
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $errors->first('user_id') }}</strong>
-                                        </span>
-                                    @endif
+                            <!-- <div class="pl-lg-4"> -->
+                                <!-- <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}"> -->
+                                    <!-- <label class="form-control-label" for="cabang">{{ __('User ID') }}</label> -->
+                                    <input type="hidden" name="user_id" id="user_id" value="{{$users->id}}" class="form-control form-control-alternative col-md-3" disabled>
+                                    <!-- @if ($errors->has('user_id')) -->
+                                        <!-- <span class="invalid-feedback" role="alert"> -->
+                                            <!-- <strong>{{ $errors->first('user_id') }}</strong> -->
+                                        <!-- </span> -->
+                                    <!-- @endif -->
                                 </div>
                             <div class="pl-lg-4">
                                 <div class="form-group{{ $errors->has('name') ? ' has-danger' : '' }}">

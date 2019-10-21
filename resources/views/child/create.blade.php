@@ -29,14 +29,14 @@
                             </div>
                         @endif
                         
-                        <form method="post" action="{{ route('child.store') }}" autocomplete="off">
+                        <form method="post" action="{{ route('child.store', $user->id) }}" autocomplete="off">
                             @csrf
                             
                             <h6 class="heading-small text-muted mb-4">{{ __('Identitas') }}</h6>
                             <div class="form-group">
                                     <label for="user" class="form-control-label">User Id</label>
 
-                                    <input type="text" name="user_id" id="user" class="form-control form-control-alternative" placeholder="User Id" required>
+                                    <input type="hidden" name="user_id" id="user" class="form-control form-control-alternative" placeholder="User Id" value="{{$user->id}}">
 
                                     @if ($errors->has('user'))
                                         <span class="invalid-feedback" role="alert">

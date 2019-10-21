@@ -13,7 +13,7 @@
                                 <h3 class="mb-0"></h3>
                             </div>
                             <div class="col-4 text-right">
-                                <a href="{{ route('child.create') }}" class="btn btn-sm btn-primary">Tambah Data</a>
+                                <a href="/child/{{ $user->id }}/create" class="btn btn-sm btn-primary">Tambah Data</a>
                             </div>
                         </div>
                     </div>
@@ -31,7 +31,7 @@
 
                     <div class="card-body">
                         <div class="table-responsive">
-                            <h3>Anak dari  sdr.<b>{{ $user->name }}</b></h3>
+                            <h3>Anak dari sdr. <b>{{ $user->name }}</b></h3>
 
                             <table class="table table-bordered table-flush" id="table">
                                 <thead class="thead-light">

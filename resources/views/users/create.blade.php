@@ -38,7 +38,7 @@
                                 <div class="form-group">
                                     <label for="nip" class="form-control-label">NIP</label>
 
-                                    <input type="number" name="nip" id="nip" class="form-control form-control-alternative" placeholder="NIP" value="{{ old('nip') }}" required>
+                                    <input type="number" name="nip" id="nip" class="form-control form-control-alternative" placeholder="NIP" value="{{ old('nip') }}">
 
                                     @if ($errors->has('name'))
                                         <span class="invalid-feedback" role="alert">
@@ -77,7 +77,7 @@
                                 <div class="form-group">
                                     <label for="role" class="form-control-label">Role</label>
 
-                                    <select name="role" id="role" class="form-control form-control-alternative">
+                                    <select name="role" id="role" class="form-control form-control-alternative" required>
                                         <option disabled selected>Pilih Salah Satu</option>
                                         <option value="user">User</option>
                                         <option value="operator">Operator</option>

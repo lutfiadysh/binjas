@@ -2,17 +2,19 @@
 
 namespace App\Http\Controllers;
 
-use App\Child;
-use App\User;
 use Illuminate\Http\Request;
+use App\User;
 
-class ChildController extends Controller
+class PuteraController extends Controller
 {
-    public function index(User $model)
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
     {
-        $users = $model->all();
-
-        return view('child.index', compact('users'));
+        //
     }
 
     /**
@@ -20,18 +22,20 @@ class ChildController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create($id)
+    public function create()
     {
-        $user = User::findOrFail($id);
-
-        return view('child.create',compact('user'));
+        //
     }
 
-    public function store(Request $request,Child $model)
-    {   
-        $model->create($request->all());
-
-        return redirect()->route('child.index')->withStatus(__('Child successfully created.'));
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        //
     }
 
     /**
@@ -43,8 +47,8 @@ class ChildController extends Controller
     public function show($id)
     {
         $user = User::findOrFail($id);
-        $child = $user->children;
-        return view('child.show',compact('user','child'));
+
+        return view('operator.putera.show',compact('user'));
     }
 
     /**
@@ -53,10 +57,9 @@ class ChildController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit(Child $id)
+    public function edit($id)
     {
-        $child = Child::findOrFail($id);
-        return view('child.edit', compact('child'));
+        //
     }
 
     /**
@@ -68,9 +71,7 @@ class ChildController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $child->update($request->all());
-
-        return redirect()->withStatus(__('User successfully updated.'));
+        //
     }
 
     /**
