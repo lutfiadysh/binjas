@@ -36,6 +36,14 @@ Route::group(['middleware' => 'auth'], function () {
 		Route::get('{id}/edit', 'ChildController@edit')->name('child.edit');
 	});
 	
+	// Route::prefix('kesjas')->group(function() {
+	// 	Route::get('', 'KesjasController@index')->name('kesjas.index');
+	// 	Route::get('{id}', 'KesjasController@show')->name('kesjas.show');
+	// 	Route::get('{id}/create', 'KesjasController@create')->name('kesjas.create');
+	// 	Route::post('{id}', 'KesjasController@store')->name('kesjas.store');
+	// 	Route::get('{id}/edit', 'KesjasController@edit')->name('kesjas.edit');
+	// });
+
 	Route::resource('child', 'ChildController');
 	Route::resource('tkj','TkjController');
 	Route::resource('bdp','BdpController');
@@ -43,10 +51,12 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('olahraga','OlahragaController');
 	Route::resource('lain','LainController'); 
 	Route::resource('putera','PuteraController');
-
 	
-	Route::get('kesjas', function() {
-		return view('members.index');
+	Route::get('kesjas',function(){
+		return view('members.show');
+	});
+	Route::get('pres',function(){
+		return view('members.prestasi');
 	});
 	Route::get('laporan', function() {
 		return view('operator.laporan');

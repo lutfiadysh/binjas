@@ -22,7 +22,7 @@
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-success text-white rounded-circle shadow">
-                                    <span>70</span>
+                                    <span>{{ Auth::user()->bdp->bare_handed}}</span>
                                 </div>
                             </div>
                         </div>

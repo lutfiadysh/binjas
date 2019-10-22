@@ -44,16 +44,16 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                @for ($i = 9; $i >= 7; $i--)
+                                @for ($i = 9; $i >= 8; $i--)
                                     <tr>
                                         <th colspan="4" class="text-primary">
-                                            <span class="display-4">201{{ $i }}</span>
+                                            <span class="display-4">{{ Auth::user()->prestasi->year }}</span>
                                         </th>
                                     </tr>
                                     <tr>
-                                        <td>Karate</td>
-                                        <td>Atlet</td>
-                                        <td>Nasional</td>
+                                        <td>{{ Auth::user()->prestasi->branch }}</td>
+                                        <td>{{ Auth::user()->prestasi->position }}</td>
+                                        <td>{{ Auth::user()->prestasi->level }}</td>
                                         <td>
                                             <button class="btn btn-primary btn-icon">
                                                 <span class="btn-inner--icon"><i class="ni ni-collection"></i></span>

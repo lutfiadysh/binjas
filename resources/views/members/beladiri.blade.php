@@ -50,15 +50,15 @@
                             <tbody>
                                 <tr>
                                     <td>Teknik Dasar</td>
-                                    <td class="font-weight-bold">69</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->bdp->basic_technique }}</td>
                                 </tr>
                                 <tr>
                                     <td>Tangan Kosong Lawan Alat</td>
-                                    <td class="font-weight-bold">69</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->bdp->bare_handed }}</td>
                                 </tr>
                                 <tr>
                                     <td>Alat Lawan Alat</td>
-                                    <td class="font-weight-bold">69</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->bdp->with_equipment }}</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -76,7 +76,7 @@
                                 {{-- Konten --}}
                                 <div class="row">
                                     <div class="col">
-                                        <span class="display-3 font-weight-bold mb-0">70</span>
+                                        <span class="display-3 font-weight-bold mb-0">{{Auth::user()->bdp->with_equipment}}</span>
                                         <span>
                                             <small class="text-lighter font-weight-bold">Nilai</small>
                                         </span>

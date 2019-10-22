@@ -26,4 +26,17 @@ class User extends Authenticatable
     {
         return $this->hasMany('App\Child');
     }
+    public function tkj()
+    {
+        return $this->hasOne('App\Tkj', 'user_id', 'id');
+    }
+    public function bdp()
+    {
+        return $this->hasOne('App\Bdp','user_id','id');
+    }
+    public function prestasi()
+    {
+        return $this->hasOne('App\Prestasi','user_id','id');
+    }
 }
+

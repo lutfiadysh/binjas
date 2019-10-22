@@ -51,28 +51,28 @@
                             <tbody>
                                 <tr>
                                     <td>Lari 12 menit</td>
-                                    <td class="font-weight-bold">2680</td>
-                                    <td class="font-weight-bold">73</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->tkj->running }}</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->tkj->running }}</td>
                                 </tr>
                                 <tr>
                                     <td>Pull up / chinning</td>
-                                    <td class="font-weight-bold">17</td>
-                                    <td class="font-weight-bold">100</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->tkj->pull_up }}</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->tkj->pull_up }}</td>
                                 </tr>
                                 <tr>
                                     <td>Sit up</td>
-                                    <td class="font-weight-bold">42</td>
-                                    <td class="font-weight-bold">100</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->tkj->sit_up }}</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->tkj->sit_up }}</td>
                                 </tr>
                                 <tr>
                                     <td>Push up</td>
-                                    <td class="font-weight-bold">42</td>
-                                    <td class="font-weight-bold">100</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->tkj->push_up }}</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->tkj->push_up }}</td>
                                 </tr>
                                 <tr>
                                     <td>Shuttle run</td>
-                                    <td class="font-weight-bold">18.2</td>
-                                    <td class="font-weight-bold">83</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->tkj->shuttle_run }}</td>
+                                    <td class="font-weight-bold">{{ Auth::user()->tkj->shuttle_run }}</td>
                                 </tr>
                             </tbody>
                         </table>

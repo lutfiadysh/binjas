@@ -42,7 +42,7 @@
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-success text-white rounded-circle shadow">
-                                    <span>70</span>
+                                    <span>{{ Auth::user()->bdp->with_equipment }}</span>
                                 </div>
                             </div>
                         </div>

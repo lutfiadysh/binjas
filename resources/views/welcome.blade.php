@@ -114,7 +114,7 @@
                         <li class="dropdown">
                             <a href="#" >{{ Auth::user()->name }}</a>
                             <ul class="dropdown-menu">
-                                <li><a href="{{ route('user.index') }}">Dashboard</a></li>
+                                <li><a href="/home">Dashboard</a></li>
                                 <li><a  href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
